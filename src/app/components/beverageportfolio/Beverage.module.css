@@ -1,0 +1,16 @@
+.shape1 {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  top: -100px;
+  right: 200px;  /* instead of left */
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 340px;
+  transform: rotate(-120.09deg);
+  z-index: 1;
+}
+
+
+
+
