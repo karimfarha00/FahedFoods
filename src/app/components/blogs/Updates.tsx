@@ -1,38 +1,76 @@
 "use client";
 import Image from "next/image";
+import { forwardRef } from "react";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
-const UpdatesPage = () => {
+type CardData = {
+  id: number;
+  image: string;
+  date: string;
+  title: string;
+  description: string;
+};
+
+interface UpdatesPageProps {
+  cards: CardData[];
+}
+
+const UpdatesPage = forwardRef<HTMLDivElement, UpdatesPageProps>(({ cards }, ref) => {
   return (
-   <div className="w-full h-[500px] mt-[20px] bg-amber-300 overflow-x-auto scrollbar-hide">
-      <div className="flex flex-nowrap items-start px-[20px] space-x-[60px]">
-        {/* CARD START */}
-        <div className="min-w-[350px] h-[400px] rounded-[41px] bg-[rgba(243,243,243,1)] p-[20px] flex flex-col items-start">
-          <Image
-            src="/blogs/image1.png"
-            alt="image1"
-            width={350}
-            height={200}
-            className=" rounded-[20px]"
-          />
-          <div className="w-full mt-[10px]">
-            <p className="font-gotham font-bold text-[18px] leading-[24px] tracking-[-0.02em] text-[#94A82F]">
-              10 May 2025
-            </p>
-            <p className="font-gotham font-bold text-[14px] leading-[22px] tracking-[-0.02em] text-[rgba(27,27,27,1)] ">
-              Serving the Region: Fahed Foods’ Role in Qatar’s HORECA Growth
-            </p>
-            <p className="line-clamp-4 text-[12px] text-gray-700 ">
-              An in-depth article exploring the sourcing process...
-            </p>
+    <div className="w-full h-[500px] mt-[20px] relative flex flex-col justify-between">
+      {/* Scrollable Cards Row */}
+      <div
+        ref={ref}
+        className="flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth gap-[20px] px-[60px]"
+        style={{ scrollBehavior: "smooth" }}
+      >
+        {cards.map((card) => (
+          <div
+            key={card.id}
+            className="w-[320px] h-[370px] flex-shrink-0 rounded-[41px] pt-[18px] pr-[20px] pb-[38px] pl-[20px] bg-[rgba(243,243,243,1)] flex flex-col gap-[20px]"
+          >
+            <Image
+              src={card.image}
+              alt="image"
+              width={320}
+              height={250}
+              className="rounded-[20px]"
+            />
+            <div className="w-full">
+              <p className="font-gotham font-bold text-[12px] leading-[24px] -mt-[15px] text-[#94A82F]">
+                {card.date}
+              </p>
+              <p className="font-gotham font-bold text-[16px] leading-[22px] text-[rgba(27,27,27,1)]">
+                {card.title}
+              </p>
+              <p className="line-clamp-4 text-[12px] text-gray-700">
+                {card.description}
+              </p>
+            </div>
           </div>
-        </div>
-        {/* CARD END */}
+        ))}
+      </div>
 
-        {/* Repeat your other cards below with same structure */}
-        
+      {/* RIGHT FADE GRADIENT */}
+      <div
+        className="absolute top-0 right-0 h-full w-[236px] pointer-events-none z-10"
+        style={{
+          background: "linear-gradient(270deg, #FFFFFF 0%, rgba(255,255,255,0) 100%)",
+        }}
+      />
+
+      {/* Centered Button at Bottom */}
+      <div className="w-full flex justify-center mt-[20px]">
+        <button className="mx-auto w-[221px] h-[72px] border border-[#0000001A] rounded-[38px] px-[15px] py-[4px] gap-[10px] backdrop-blur-[64px] transition-all duration-1000 ease-in-out bg-white/60  flex items-center justify-between ">
+          <span className="text-black font-gotham font-medium text-[18px] ml-3">
+            View All Blogs
+          </span>
+          <BsArrowUpRightCircleFill className="text-[#94A82F] text-[42px]" />
+        </button>
       </div>
     </div>
   );
-};
+});
 
+UpdatesPage.displayName = "UpdatesPage";
 export default UpdatesPage;
