@@ -2,9 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 const FooterPage = () => {
   return (
-    <div className="w-full h-[600px] bg-black rounded-tl-[70px] rounded-tr-[70px]">
+   
+   
+   <div className="w-full h-[600px]  bg-black rounded-tl-[70px] rounded-tr-[70px]">
       <div className="flex justify-center items-center w-[400px] h-[250px]  ml-[90px]">
         <Image
           src="/fahed-foods-logo.png"
