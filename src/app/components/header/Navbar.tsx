@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { BiSolidRightTopArrowCircle } from "react-icons/bi";
+import { GoArrowUpRight } from "react-icons/go";
 import { useParams, usePathname, useRouter } from "next/navigation";
+import { MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
   const params = useParams();
@@ -64,37 +66,54 @@ const Navbar = () => {
       
       <div className="relative">
         {/* Button to toggle menu */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="bg-gray-700 text-white text-sm font-thin px-5  py-1.5 rounded-xl"
-        >
-          {currentLangLabel} ⌄
-        </button>
+        <div className="flex flex-row items-center justify-center">
+    <button
+      onClick={() => setOpen(!open)}
+      className={`${styles.lanbutton} flex items-center justify-center`}
+    >
+      <span className="text-sm font-medium">{currentLangLabel}</span>
+      {open ? (
+        <MdKeyboardArrowUp className="ml-2" size={28} />
+      ) : (
+        <MdKeyboardArrowDown className="ml-2" size={28} />
+      )}
+    </button>
+  </div>
+
 
         {/* Dropdown menu */}
         {open && (
-          <div className="absolute right-0 mt-2 rounded-sm  bg-white shadow-md overflow-hidden z-50">
+          <div className="absolute right-0 mt-2 rounded-2xl w-[95px] bg-white/10 backdrop-blur-[30px] shadow-md overflow-hidden ">
             <button
               onClick={() => switchLanguage("en")}
-              className="block w-full text-left px-4 py-2  hover:bg-gray-200 text-black"
+              className="block w-full text-left px-4 py-2 text-white"
             >
-              English
+              EN
             </button>
             <button
               onClick={() => switchLanguage("ar")}
-              className="block w-full text-left px-4 py-2 hover:bg-gray-200 text-black"
+              className="block w-full text-left px-4 py-2 text-white"
             >
-              العربية
+             AR
             </button>
           </div>
         )}
       </div>
       <div className={styles.rightdiv}>
-        <Link className={styles.rightbutton} href={`/${locale}/contact`}>
-          Contact Us
-          <BiSolidRightTopArrowCircle size={40} />
-        </Link>
-      </div>
+  <Link
+    className={`${styles.rightbutton} group`}
+    href={`/${locale}/contact`}
+  >
+    <span>Contact Us</span>
+    <span>
+      <GoArrowUpRight
+        className="arrow text-white bg-black rounded-full p-2 transition-all duration-300 group-hover:bg-white group-hover:text-black"
+        size={50}
+      />
+    </span>
+  </Link>
+</div>
+
       
     </nav>
    

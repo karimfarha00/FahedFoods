@@ -312,12 +312,14 @@ const FoodPortfoliopage = () => {
       </div>
 
       {/* The centered button at the bottom */}
-     <button className="mx-auto w-[291px] h-[72px] border border-[#0000001A] rounded-[38px] px-[24px] py-[4px] gap-[20px] backdrop-blur-[64px] transition-all duration-1000 ease-in-out bg-white/60 hover:bg-white flex items-center justify-between -mt-35">
-  <span className="text-black font-gotham font-medium text-[18px]">
+   <button className="group mx-auto w-[271px] h-[72px] border border-[#0000001A] rounded-[38px] py-[4px] gap-[10px] backdrop-blur-[64px] transition-all duration-1000 ease-in-out hover:bg-black flex items-center justify-between -mt-35">
+  <span className="text-black group-hover:text-white font-gotham font-extrabold text-[16px] px-[13px]">
     View All Categories
   </span>
-  <BsArrowUpRightCircleFill className="text-[#94A82F] text-[45px]" />
+  <BsArrowUpRightCircleFill className="text-[#94A82F] text-[55px] mr-[5px]" />
 </button>
+
+
 
     </div>
   );

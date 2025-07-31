@@ -94,7 +94,7 @@ const Trustpage = () => {
         </p>
       </div>
 
-      <div ref={counterRef} className="w-[300px] h-auto mt-[10px] p-4 rounded-xl">
+      <div ref={counterRef} className="w-[300px] h-auto mt-[10px] p-4 rounded-xl ">
         <div className="flex flex-row gap-10 p-4">
           {/* Years */}
           <div className="flex flex-col items-center justify-center bg-white text-center rounded p-2 w-[80px] h-[80px]">
@@ -125,11 +125,15 @@ const Trustpage = () => {
       </div>
       <div className="flex flex-row justify-center">
   <Link href="/">
-    <button className="flex flex-row items-center gap-2 mr-15 -mt-5 text-black font-gotham font-bold py-4 px-6 rounded-4xl transition duration-300">
+  <button className="group flex items-center justify-between w-[200px] h-[72px] border border-[#0000001A] rounded-[38px] py-[4px] px-[13px] gap-[10px] backdrop-blur-[64px] bg-white hover:bg-black transition-all duration-1000 ease-in-out mr-[20px]">
+    <span className="font-gotham font-extrabold text-[16px] text-black group-hover:text-white transition duration-300">
       Learn More
-      <BsArrowUpRightCircleFill className="text-[#94A82F] text-[45px]" />
-    </button>
-  </Link>
+    </span>
+    <BsArrowUpRightCircleFill className="text-[#94A82F] text-[55px]" />
+  </button>
+</Link>
+
+
 </div>
     </motion.div>
 <div className="overflow-hidden w-full">

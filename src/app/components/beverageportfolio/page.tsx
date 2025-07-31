@@ -287,12 +287,14 @@ const BeveragePortfolioPage = () => {
           transition={{ delay: 0.5, duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-      <button className=" mt-[-90px] mx-auto w-[291px] h-[72px] border border-amber-50  rounded-[38px] px-[24px] py-[4px] gap-[20px] bg-[rgba(27,27,27,1)] backdrop-blur-[64px] transition-all duration-1000 ease-in-out hover:bg-white flex items-center justify-between">
-        <span className="text-white group-hover:text-black font-gotham font-medium text-[18px] transition-all duration-500">
-          View All Categories
-        </span>
-        <BsArrowUpRightCircleFill className="text-[#94A82F] text-[40px]" />
-      </button>
+ {/* The centered button at the bottom */}
+   <button className="group mx-auto w-[271px] h-[72px] border border-[#4b5563] rounded-[38px] py-[4px] gap-[10px] backdrop-blur-[64px] transition-all duration-1000 ease-in-out hover:bg-white flex items-center justify-between -mt-25">
+  <span className="text-white group-hover:text-black font-gotham font-extrabold text-[16px] px-[13px]">
+    View All Categories
+  </span>
+  <BsArrowUpRightCircleFill className="text-[#94A82F] text-[55px] mr-[5px]" />
+</button>
+
       </motion.div>   
     </div>
   );
