@@ -6,6 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 const BeveragePortfolioPage = () => {
   return (
+   <section id="beverageportfolio">
     <div
       className="relative h-[800px] w-full overflow-x-hidden rounded-t-4xl flex flex-col justify-end items-center mt-15"
       style={{ background: "rgba(27, 27, 27, 1)" }}
@@ -44,6 +45,7 @@ const BeveragePortfolioPage = () => {
             viewport={{ once: true, amount: 0.5 }}
           >
             <div className="flex gap-[20px] mt-[25px]">
+              <section id="eira">
               {/* First Card with image on the right */}
               <div
                 className="relative w-[250px] h-[170px] rounded-[20px] overflow-hidden"
@@ -81,6 +83,8 @@ const BeveragePortfolioPage = () => {
                   </motion.div>
                 </div>
               </div>
+              </section>
+
 
               {/* Second card for spacing/demo */}
               <div
@@ -124,15 +128,17 @@ const BeveragePortfolioPage = () => {
                   </motion.div>
                 </div>
               </div>
+              
             </div>
           </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, x: -200, scale: 0.8 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ delay: 2.1, duration: 1.1, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
-          >
+          ><section id="timhortons">
             <div className="flex gap-[20px] mt-[20px]">
               <div
                 className="w-[520px] h-[200px] rounded-[20px] overflow-hidden"
@@ -181,14 +187,17 @@ const BeveragePortfolioPage = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+         </section> </motion.div>
+         
         </div>
+        
         <motion.div
           initial={{ opacity: 0, x: 200, scale: 0.8 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ delay: 2.1, duration: 1.1, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
-        >
+        ><section id="maisonperrier">
+         
           <div className="absolute  bg-white rounded-full p-1 z-10 ml-93 mt-10">
             <GoArrowUpRight
               className="text-black hover:scale-110 transition-transform duration-200"
@@ -279,7 +288,9 @@ const BeveragePortfolioPage = () => {
               {/* The centered button at the bottom */}
             </div>
           </div>
-     </motion.div>
+     </section>
+   </motion.div>
+
       </div>
        <motion.div
           initial={{ opacity: 0, y: 0, scale: 0.8 }}
@@ -297,6 +308,7 @@ const BeveragePortfolioPage = () => {
 
       </motion.div>   
     </div>
+    </section>
   );
 };
 

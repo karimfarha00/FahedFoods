@@ -6,7 +6,7 @@ import Link from "next/link";
 const FooterPage = () => {
   return (
    
-   
+   <section id="about">
    <div className="w-full h-[600px]  bg-black rounded-tl-[70px] rounded-tr-[70px]">
       <div className="flex justify-center items-center w-[400px] h-[250px]  ml-[90px]">
         <Image
@@ -241,6 +241,7 @@ const FooterPage = () => {
        </div>
   </div>
     </div>
+    </section>
   );
 };
 

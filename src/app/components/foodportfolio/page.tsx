@@ -4,9 +4,13 @@ import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
+
 const FoodPortfoliopage = () => {
+ 
+
   return (
-    // Outer wrapper for full viewport height and vertical flex column
+    <section id="foodportfolio">
+    
     <div className="flex flex-col min-h-screen justify-between bg-gray-100 px-6 mt-25">
       
       {/* Your original container unchanged */}
@@ -30,6 +34,7 @@ const FoodPortfoliopage = () => {
           </motion.div>
 
           <div className="relative flex justify-start items-center  w-full h-[500px] ">
+            <section id="cheese-and-more" >
             <motion.div
               initial={{ opacity: 0, x: -90, scale: 0.8 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
@@ -97,10 +102,12 @@ const FoodPortfoliopage = () => {
                   />
                 </Link>
               </div>
-            </motion.div>
+            </motion.div></section>
 
             <div className="flex flex-col justify-center items-center">
               <div className="w-[420px] h-[180px] mt-10 mr-5">
+               <section id="seafood"> 
+                <section id="oils">
                 <motion.div
                   initial={{ opacity: 0, y: -90, scale: 0.8 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -116,6 +123,7 @@ const FoodPortfoliopage = () => {
 
                   <div className="flex gap-[10px] flex-row flex-nowrap justify-center items-start mr-12">
                     {/* SEAFOOD CARD */}
+                    
                     <div className="relative w-[250px] h-[210px] ml-4">
                       <div className="font-gotham font-black text-[25px] leading-[58px] tracking-[0] absolute uppercase text-white z-10 mt-17 ml-5">
                         SEAFOOD
@@ -148,8 +156,10 @@ const FoodPortfoliopage = () => {
                         />
                       </Link>
                     </div>
+                    
 
                     {/* OILS CARD */}
+                    
                     <div className="w-[260px] h-[100px]">
                       <div className="font-gotham font-black text-[25px] leading-[58px] tracking-[0] absolute uppercase text-white z-10 mt-18 ml-17">
                         oils
@@ -189,11 +199,15 @@ const FoodPortfoliopage = () => {
                         />
                       </Link>
                     </div>
+                   
                   </div>
                 </motion.div>
+                </section>
+                 </section>
               </div>
 
               <div className="w-[430px] h-[220px] ml-2 mt-10">
+                <section id="deli">
                 <motion.div
                   initial={{ opacity: 0, y: 90, scale: 0.8 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -251,10 +265,12 @@ const FoodPortfoliopage = () => {
                     </Link>
                   </div>
                 </motion.div>
+                </section>
               </div>
             </div>
 
             <div className="flex flex-row justify-end ">
+             <section id="meat">
               <motion.div
                 initial={{ opacity: 0, x: 90, scale: 0.8 }}
                 whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
@@ -306,6 +322,7 @@ const FoodPortfoliopage = () => {
                   </div>
                 </div>
               </motion.div>
+              </section>
             </div>
           </div>
         </div>
@@ -322,6 +339,7 @@ const FoodPortfoliopage = () => {
 
 
     </div>
+    </section>
   );
 };
 

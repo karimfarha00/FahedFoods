@@ -76,6 +76,7 @@ const BlogsPage = () => {
   ];
 
   return (
+    <section id="blogs">
     <div className="w-full h-auto overflow-x-hidden">
       <div className="max-w-[1440px] mx-auto px-6 mt-[100px]">
          <p className="font-gotham font-bold text-[30px] leading-[30px] tracking-[0] uppercase">Blogs</p>
@@ -98,6 +99,7 @@ const BlogsPage = () => {
       <UpdatesPage ref={scrollRef} cards={cards} />
     
     </div>
+    </section>
   );
 };
 

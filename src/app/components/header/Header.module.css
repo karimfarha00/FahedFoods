@@ -26,7 +26,16 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
+    
 
+}
+
+.menu{
+  font-size: 60px;
+  font-weight:bold;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
 
 .rightdiv {
@@ -70,3 +79,22 @@
   border-radius: 9999px; /* Full rounded */
 }
 
+@media (max-width:1080px){
+  .namelink{
+    display: none;
+    
+  }
+.links{
+  background-color: black;
+}
+  .rightdiv{
+    display: none;
+  }
+  .lanbutton{
+    display: none;
+  }
+  .menu{
+    display:block;
+    
+  }
+}
